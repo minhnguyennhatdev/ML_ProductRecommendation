@@ -29,6 +29,8 @@ const products = apiproduct.drinks
 // filterdata.sort((a, b) => (a.quantity < b.quantity) ? 1 : -1)
 // filterdata.map(obj => quantity+= obj.quantity)
 
+
+//create matrix from users's orders data
 const createDataMatrix = () => {
     const dataMatrix = data
     dataMatrix.map(user => {
@@ -51,8 +53,8 @@ const createDataMatrix = () => {
 
 const dataMatrix = createDataMatrix()
 
+//filter matrix with only quantity
 let filterDataMatrix = []
-
 dataMatrix.map(items => {
     items.orders = items.orders.sort((a, b) => (a._id < b._id) ? 1 : -1)
     const dataQuantity = []
@@ -61,6 +63,7 @@ dataMatrix.map(items => {
     })
     filterDataMatrix.push(dataQuantity)
 })
+
 
 function dotp(x, y) {
     function dotp_sum(a, b) {
@@ -71,7 +74,7 @@ function dotp(x, y) {
     }
     return x.map(dotp_times).reduce(dotp_sum, 0);
 }
-  
+
 function cosineSimilarity(A,B){
     var similarity = dotp(A, B) / (Math.sqrt(dotp(A,A)) * Math.sqrt(dotp(B,B)));
     return similarity;
@@ -82,6 +85,7 @@ filterDataMatrix = filterDataMatrix.filter(e => e.length > 0)
 
 cosineSimilarityMatrix = []
 
+//create similarity matrix using cosin formula
 filterDataMatrix.map(array1 => {
     temp = []
     filterDataMatrix.map(array2 => {
