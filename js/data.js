@@ -12,12 +12,12 @@ const apiorder = {
                 {
                     "_id": "620ba6f08b1a49a77e13a731",
                     "drinkName": "PHINDI KEM SỮA",
-                    "quantity": 5
+                    "quantity": 8
                 },
                 {
                     "_id": "620ba74f8b1a49a77e13a73d",
                     "drinkName": "BẠC XỈU ĐÁ",
-                    "quantity": 1
+                    "quantity": 3
                 },
                 {
                     "_id": "620ba7d28b1a49a77e13a74c",
@@ -27,18 +27,89 @@ const apiorder = {
                 {
                     "_id": "620ba7328b1a49a77e13a73a",
                     "drinkName": "PHINDI HỒNG TRÀ",
-                    "quantity": 1
+                    "quantity": 2
                 },
                 {
                     "_id": "620ba7758b1a49a77e13a743",
                     "drinkName": "PHIN SỮA ĐÁ",
                     "quantity": 1
+                },
+                {
+                    "_id": "620ba75f8b1a49a77e13a740",
+                    "drinkName": "PHIN ĐEN ĐÁ",
+                    "quantity": 1
+                },
+                {
+                    "_id": "620ba8318b1a49a77e13a755",
+                    "drinkName": "CARAMEL PHIN FREEZE",
+                    "quantity": 2
+                },
+                {
+                    "_id": "620ba8618b1a49a77e13a758",
+                    "drinkName": "CLASSIC PHIN FREEZE",
+                    "quantity": 2
+                },
+                {
+                    "_id": "620ba87d8b1a49a77e13a75b",
+                    "drinkName": "FREEZE TRÀ XANH",
+                    "quantity": 1
+                },
+                {
+                    "_id": "620ba91b8b1a49a77e13a76d",
+                    "drinkName": "TRÀ THANH ĐÀO",
+                    "quantity": 4
+                },
+                {
+                    "_id": "620ba8f28b1a49a77e13a76a",
+                    "drinkName": "TRÀ THẠCH ĐÀO",
+                    "quantity": 1
+                },
+                {
+                    "_id": "620ba7238b1a49a77e13a737",
+                    "drinkName": "PHINDI CHOCO",
+                    "quantity": 3
                 }
             ]
         },
         {
             "customer": "09812398522",
-            "orders": []
+            "orders": [
+                {
+                    "_id": "620ba6f08b1a49a77e13a731",
+                    "drinkName": "PHINDI KEM SỮA",
+                    "quantity": 3
+                },
+                {
+                    "_id": "620ba8318b1a49a77e13a755",
+                    "drinkName": "CARAMEL PHIN FREEZE",
+                    "quantity": 1
+                },
+                {
+                    "_id": "620ba91b8b1a49a77e13a76d",
+                    "drinkName": "TRÀ THANH ĐÀO",
+                    "quantity": 1
+                },
+                {
+                    "_id": "620ba8f28b1a49a77e13a76a",
+                    "drinkName": "TRÀ THẠCH ĐÀO",
+                    "quantity": 1
+                },
+                {
+                    "_id": "620ba8e18b1a49a77e13a767",
+                    "drinkName": "TRÀ THẠCH VẢI",
+                    "quantity": 1
+                },
+                {
+                    "_id": "620ba7238b1a49a77e13a737",
+                    "drinkName": "PHINDI CHOCO",
+                    "quantity": 5
+                },
+                {
+                    "_id": "620ba74f8b1a49a77e13a73d",
+                    "drinkName": "BẠC XỈU ĐÁ",
+                    "quantity": 4
+                }
+            ]
         },
         {
             "customer": "07512392312",
@@ -56,6 +127,21 @@ const apiorder = {
                 {
                     "_id": "620ba8f28b1a49a77e13a76a",
                     "drinkName": "TRÀ THẠCH ĐÀO",
+                    "quantity": 4
+                },
+                {
+                    "_id": "620ba8e18b1a49a77e13a767",
+                    "drinkName": "TRÀ THẠCH VẢI",
+                    "quantity": 1
+                },
+                {
+                    "_id": "620ba8a68b1a49a77e13a761",
+                    "drinkName": "FREEZE SÔ-CÔ-LA",
+                    "quantity": 3
+                },
+                {
+                    "_id": "620ba8618b1a49a77e13a758",
+                    "drinkName": "CLASSIC PHIN FREEZE",
                     "quantity": 1
                 }
             ]
@@ -76,11 +162,51 @@ const apiorder = {
                 {
                     "_id": "620ba7328b1a49a77e13a73a",
                     "drinkName": "PHINDI HỒNG TRÀ",
-                    "quantity": 1
+                    "quantity": 6
                 },
                 {
                     "_id": "620ba75f8b1a49a77e13a740",
                     "drinkName": "PHIN ĐEN ĐÁ",
+                    "quantity": 1
+                },
+                {
+                    "_id": "620ba6f08b1a49a77e13a731",
+                    "drinkName": "PHINDI KEM SỮA",
+                    "quantity": 1
+                },
+                {
+                    "_id": "620ba8008b1a49a77e13a752",
+                    "drinkName": "CAPPUCCINO",
+                    "quantity": 2
+                },
+                {
+                    "_id": "620ba8e18b1a49a77e13a767",
+                    "drinkName": "TRÀ THẠCH VẢI",
+                    "quantity": 1
+                },
+                {
+                    "_id": "620ba7ae8b1a49a77e13a749",
+                    "drinkName": "CARAMEL MACCHIATO",
+                    "quantity": 1
+                },
+                {
+                    "_id": "620ba7d28b1a49a77e13a74c",
+                    "drinkName": "ESPRESSO",
+                    "quantity": 2
+                },
+                {
+                    "_id": "620ba7e38b1a49a77e13a74f",
+                    "drinkName": "LATTE",
+                    "quantity": 1
+                },
+                {
+                    "_id": "620ba8318b1a49a77e13a755",
+                    "drinkName": "CARAMEL PHIN FREEZE",
+                    "quantity": 1
+                },
+                {
+                    "_id": "620ba8618b1a49a77e13a758",
+                    "drinkName": "CLASSIC PHIN FREEZE",
                     "quantity": 1
                 }
             ]
@@ -94,17 +220,97 @@ const apiorder = {
                 {
                     "_id": "620ba7328b1a49a77e13a73a",
                     "drinkName": "PHINDI HỒNG TRÀ",
-                    "quantity": 1
+                    "quantity": 2
                 },
                 {
                     "_id": "620ba91b8b1a49a77e13a76d",
                     "drinkName": "TRÀ THANH ĐÀO",
-                    "quantity": 1
+                    "quantity": 2
                 },
                 {
                     "_id": "620ba8f28b1a49a77e13a76a",
                     "drinkName": "TRÀ THẠCH ĐÀO",
+                    "quantity": 2
+                },
+                {
+                    "_id": "620ba7868b1a49a77e13a746",
+                    "drinkName": "PHIN ĐEN NÓNG",
+                    "quantity": 3
+                },
+                {
+                    "_id": "620ba7ae8b1a49a77e13a749",
+                    "drinkName": "CARAMEL MACCHIATO",
+                    "quantity": 2
+                },
+                {
+                    "_id": "620ba7d28b1a49a77e13a74c",
+                    "drinkName": "ESPRESSO",
+                    "quantity": 4
+                },
+                {
+                    "_id": "620ba8008b1a49a77e13a752",
+                    "drinkName": "CAPPUCCINO",
+                    "quantity": 2
+                },
+                {
+                    "_id": "620ba7e38b1a49a77e13a74f",
+                    "drinkName": "LATTE",
+                    "quantity": 2
+                },
+                {
+                    "_id": "620ba8618b1a49a77e13a758",
+                    "drinkName": "CLASSIC PHIN FREEZE",
+                    "quantity": 2
+                },
+                {
+                    "_id": "620ba8d58b1a49a77e13a764",
+                    "drinkName": "TRÀ SEN VÀNG",
+                    "quantity": 2
+                },
+                {
+                    "_id": "620ba8a68b1a49a77e13a761",
+                    "drinkName": "FREEZE SÔ-CÔ-LA",
+                    "quantity": 3
+                },
+                {
+                    "_id": "620ba7758b1a49a77e13a743",
+                    "drinkName": "PHIN SỮA ĐÁ",
                     "quantity": 1
+                },
+                {
+                    "_id": "620ba75f8b1a49a77e13a740",
+                    "drinkName": "PHIN ĐEN ĐÁ",
+                    "quantity": 1
+                },
+                {
+                    "_id": "620ba74f8b1a49a77e13a73d",
+                    "drinkName": "BẠC XỈU ĐÁ",
+                    "quantity": 1
+                },
+                {
+                    "_id": "620ba7238b1a49a77e13a737",
+                    "drinkName": "PHINDI CHOCO",
+                    "quantity": 1
+                },
+                {
+                    "_id": "620ba8318b1a49a77e13a755",
+                    "drinkName": "CARAMEL PHIN FREEZE",
+                    "quantity": 1
+                },
+                {
+                    "_id": "620ba87d8b1a49a77e13a75b",
+                    "drinkName": "FREEZE TRÀ XANH",
+                    "quantity": 1
+                },
+                {
+                    "_id": "620ba8958b1a49a77e13a75e",
+                    "drinkName": "COOKIES & CREAM",
+                    "quantity": 1
+                },
+                {
+                    "_id": "620ba8e18b1a49a77e13a767",
+                    "drinkName": "TRÀ THẠCH VẢI",
+                    "quantity": 2
                 }
             ]
         },
@@ -114,17 +320,108 @@ const apiorder = {
                 {
                     "_id": "620ba7328b1a49a77e13a73a",
                     "drinkName": "PHINDI HỒNG TRÀ",
-                    "quantity": 1
+                    "quantity": 4
                 },
                 {
                     "_id": "620ba6f08b1a49a77e13a731",
                     "drinkName": "PHINDI KEM SỮA",
+                    "quantity": 2
+                },
+                {
+                    "_id": "620ba7758b1a49a77e13a743",
+                    "drinkName": "PHIN SỮA ĐÁ",
+                    "quantity": 3
+                },
+                {
+                    "_id": "620ba8a68b1a49a77e13a761",
+                    "drinkName": "FREEZE SÔ-CÔ-LA",
+                    "quantity": 3
+                },
+                {
+                    "_id": "620ba7868b1a49a77e13a746",
+                    "drinkName": "PHIN ĐEN NÓNG",
+                    "quantity": 5
+                },
+                {
+                    "_id": "620ba70c8b1a49a77e13a734",
+                    "drinkName": "PHINDI HẠNH NHÂN",
                     "quantity": 1
+                },
+                {
+                    "_id": "620ba7238b1a49a77e13a737",
+                    "drinkName": "PHINDI CHOCO",
+                    "quantity": 2
+                },
+                {
+                    "_id": "620ba74f8b1a49a77e13a73d",
+                    "drinkName": "BẠC XỈU ĐÁ",
+                    "quantity": 2
+                },
+                {
+                    "_id": "620ba75f8b1a49a77e13a740",
+                    "drinkName": "PHIN ĐEN ĐÁ",
+                    "quantity": 1
+                },
+                {
+                    "_id": "620ba7ae8b1a49a77e13a749",
+                    "drinkName": "CARAMEL MACCHIATO",
+                    "quantity": 4
+                },
+                {
+                    "_id": "620ba7e38b1a49a77e13a74f",
+                    "drinkName": "LATTE",
+                    "quantity": 1
+                },
+                {
+                    "_id": "620ba8008b1a49a77e13a752",
+                    "drinkName": "CAPPUCCINO",
+                    "quantity": 1
+                },
+                {
+                    "_id": "620ba8318b1a49a77e13a755",
+                    "drinkName": "CARAMEL PHIN FREEZE",
+                    "quantity": 1
+                },
+                {
+                    "_id": "620ba8618b1a49a77e13a758",
+                    "drinkName": "CLASSIC PHIN FREEZE",
+                    "quantity": 1
+                },
+                {
+                    "_id": "620ba87d8b1a49a77e13a75b",
+                    "drinkName": "FREEZE TRÀ XANH",
+                    "quantity": 1
+                },
+                {
+                    "_id": "620ba8958b1a49a77e13a75e",
+                    "drinkName": "COOKIES & CREAM",
+                    "quantity": 1
+                },
+                {
+                    "_id": "620ba8d58b1a49a77e13a764",
+                    "drinkName": "TRÀ SEN VÀNG",
+                    "quantity": 1
+                },
+                {
+                    "_id": "620ba8e18b1a49a77e13a767",
+                    "drinkName": "TRÀ THẠCH VẢI",
+                    "quantity": 1
+                },
+                {
+                    "_id": "620ba8f28b1a49a77e13a76a",
+                    "drinkName": "TRÀ THẠCH ĐÀO",
+                    "quantity": 1
+                },
+                {
+                    "_id": "620ba91b8b1a49a77e13a76d",
+                    "drinkName": "TRÀ THANH ĐÀO",
+                    "quantity": 3
                 }
             ]
         }
     ]
 }
+
 
 const apiproduct = {
     "success": true,

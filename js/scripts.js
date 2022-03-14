@@ -2,34 +2,6 @@
 const data = apiorder.customersOrders
 const products = apiproduct.drinks
 
-// const filter = (drinkid) => {
-//     const find = data.filter(orders => {
-//         return orders.orders.find(order => order._id === drinkid)
-//     })
-//     let filterdata = []
-//     find.map(orders => {
-//         orders.orders.map(order => {
-//             const check = filterdata.find(obj => obj.drinkName === order.drinkName)
-//             if(check){
-//                 check.quantity += order.quantity
-//             }
-//             else {
-//                 const object = {
-//                     _id: order._id,
-//                     drinkName: order.drinkName,
-//                     quantity: order.quantity
-//                 }
-//                 filterdata.push(object)
-//             }
-//         })
-//     })
-//     return filterdata
-// }
-// filterdata = filterdata.filter(e => e._id !== '620ba70c8b1a49a77e13a734')
-// filterdata.sort((a, b) => (a.quantity < b.quantity) ? 1 : -1)
-// filterdata.map(obj => quantity+= obj.quantity)
-
-
 //create matrix from users's orders data
 const createDataMatrix = () => {
     const dataMatrix = data
@@ -50,10 +22,9 @@ const createDataMatrix = () => {
     })
     return dataMatrix
 }
-
 const dataMatrix = createDataMatrix()
 
-//filter matrix with only quantity
+//soft datamatrix by _id and filter with only quantity
 let filterDataMatrix = []
 dataMatrix.map(items => {
     items.orders = items.orders.sort((a, b) => (a._id < b._id) ? 1 : -1)
@@ -64,7 +35,7 @@ dataMatrix.map(items => {
     filterDataMatrix.push(dataQuantity)
 })
 
-
+//calculating 2 array distance using cosin
 function dotp(x, y) {
     function dotp_sum(a, b) {
       return a + b;
@@ -74,7 +45,6 @@ function dotp(x, y) {
     }
     return x.map(dotp_times).reduce(dotp_sum, 0);
 }
-
 function cosineSimilarity(A,B){
     var similarity = dotp(A, B) / (Math.sqrt(dotp(A,A)) * Math.sqrt(dotp(B,B)));
     return similarity;
@@ -83,9 +53,8 @@ function cosineSimilarity(A,B){
 
 filterDataMatrix = filterDataMatrix.filter(e => e.length > 0)
 
+//create similarity matrix using cosin 
 cosineSimilarityMatrix = []
-
-//create similarity matrix using cosin formula
 filterDataMatrix.map(array1 => {
     temp = []
     filterDataMatrix.map(array2 => {
@@ -94,4 +63,63 @@ filterDataMatrix.map(array1 => {
     cosineSimilarityMatrix.push(temp)
 })
 
-console.log(cosineSimilarityMatrix)
+let decor = (v, i) => [v, i];
+let undecor = a => a[1];
+let argsort = arr => arr.map(decor).sort().map(undecor);
+
+// const argsort = a=>a.map(d).sort().map(u);d=(v,i)=>[v,i];u=i=>i[1]
+
+Array.prototype.sum = function() {
+    return (! this.length) ? 0 : this.slice(1).sum() +
+        ((typeof this[0] == 'number') ? this[0] : 0);
+};
+
+function getArray(table1, table2)
+{
+    var i, out = [];//literal new array
+    for(i=0;i<table1.length;i++)
+    {
+        out.push([table1[i],table2[i]]);
+    }
+    return out;
+}
+
+const predict = (A, u, i) => {
+    const k = 2
+    const user_rated_i = []
+    A.map(e => {
+        if(A[A.indexOf(e)][i] !== 0) {
+            user_rated_i.push(A.indexOf(e))
+        }
+    })
+    sim = []
+    user_rated_i.map(e => {
+        sim.push(cosineSimilarityMatrix[u][e])
+    })
+    a = argsort(sim).slice(-2)
+    nearest_s = [ sim[a[0]], sim[a[1]] ]
+    const temp = [ user_rated_i[a[0]], user_rated_i[a[1]] ]
+    rating = [ A[temp[0]][i], A[temp[1]][i] ] 
+    r_bar = ( rating[0]*nearest_s[0] + rating[1]*nearest_s[1] )/( nearest_s[0]+nearest_s[1] )
+    return Math.round(r_bar)
+}
+
+const predictMatrix = () => {
+    var predict_matrix = filterDataMatrix.map(function(arr) {
+        return arr.slice();
+    });
+    for (let u = 0; u < predict_matrix.length; u++) {
+        for (let i = 0; i < predict_matrix[0].length; i++) {
+            if (filterDataMatrix[u][i] === 0) {
+                id = i
+                predict_matrix[u][i] = predict(filterDataMatrix,u,id)
+            }
+        }
+    }
+    return predict_matrix
+}
+
+//result
+console.log(dataMatrix)
+console.log(filterDataMatrix)
+console.log(predictMatrix())
