@@ -119,7 +119,10 @@ const predictMatrix = () => {
     return predict_matrix
 }
 
-//result
+//@result
+    //begin
 console.log(dataMatrix)
+    //filtered matrix
 console.log(filterDataMatrix)
+    //final result
 console.log(predictMatrix())
